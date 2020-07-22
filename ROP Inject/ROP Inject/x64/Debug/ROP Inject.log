@@ -1,2 +1,0 @@
-﻿  ROP Inject.cpp
-C:\Users\3ts75\source\repos\ROP Inject\ROP Inject\ROP Inject.cpp(81,101): error C2065: 'PAGE_WRITE': 定義されていない識別子です。
