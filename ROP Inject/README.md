@@ -1,6 +1,4 @@
-# Backup windows
-
-## ROP Inject
+# ROP Inject
 Windowsの引数の扱い
 ```
 rcx = arg1
@@ -24,7 +22,8 @@ r9 = arg4
 | ...  |
 ```
 
-Windows 10で使うROP Gadgets
+## ROP Gadgets
+Windows10で使用可能なGadgets
 ```asm
 [ pop gadgets ]
 pop rax  // 0x58
@@ -41,6 +40,7 @@ push rax  // 0x50
 ret  // 0xc3
 ```
 
+## 関数
 今回は**ZwAllocateVirtualMemory**->**memcpy**の順に呼び出す
 - ZwAllocateVirtualMemory
   - RWXでメモリをallocateする
@@ -88,7 +88,7 @@ rdx = *src
 r8 = count
 ```
 
-これらより作成したスタック構成
+## スタック構成
 ```
 | *BaseAddress                      |  // rdx
 +-----------------------------------+
